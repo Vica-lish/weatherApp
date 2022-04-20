@@ -1,0 +1,31 @@
+.temps-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.temp-container__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 8rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid black; 
+}
+
+@media (min-width: 40rem) {
+    .temps-container{
+        flex-direction: row;
+        width: 70%;
+        margin-top: 3rem;
+    }
+
+    .temp-container__item {
+        margin: 0.5rem;
+        padding: 0.5rem;
+        max-width: 10rem;
+    }
+}

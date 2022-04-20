@@ -1,0 +1,135 @@
+.main-header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+.main-nav {
+    display: none;
+}
+
+.toggle-button {
+    width: 3rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding-top: 0;
+    vertical-align: middle;
+  }
+  
+  .toggle-button:focus {
+    outline: none;
+  }
+  
+  .toggle-button__bar {
+    width: 100%;
+    height: 0.2rem;
+    background: black;
+    display: block;
+    margin: 0.6rem 0;
+  }
+  
+.main-header__brand {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-size:x-large;
+}
+
+.main-header__brand a{
+    height: 2.5rem;
+    vertical-align: middle;
+    margin-left: 2rem;
+}
+
+    .main-nav__item a,
+    .mobile-nav__item a {
+      text-decoration: none;
+      color:black;
+      font-weight: bold;
+      padding: 0.2rem 0;
+    }
+
+    .mobile-nav {
+        position: fixed;
+        z-index: 101;
+        top: 0;
+        left: 0;
+        background: white;
+        width: 65%;
+        height: 100vh;
+      }
+      
+      .mobile-nav__items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        width: 90%;
+        height: 100%;
+        list-style: none;
+        padding: 0;
+      }
+      
+      .mobile-nav__item {
+        margin: 1rem 0;
+      }
+      
+      .mobile-nav__item a {
+        font-size: 1.5rem;
+      }
+      
+
+
+@media (min-width: 40rem) {
+  
+    .main-nav {
+        display: flex;
+      }
+
+      .backdrop{
+        display: none;
+      }
+      
+      .toggle-button {
+        display: none;
+      }
+
+      .main-header__brand a{
+        margin-left: 0.5rem;
+      }
+
+      .main-nav__items {
+        margin-right: 2rem;
+        padding: 0.5rem;
+        list-style: none;
+        display: flex;
+        border: 3px solid black;
+      }
+    
+      .main-nav__item {
+        margin: 0 1rem;
+      }
+    
+    .main-nav__item a:hover,
+    .main-nav__item a:active {
+      color: #ff1b68;
+    }
+
+}
